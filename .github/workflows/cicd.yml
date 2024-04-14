@@ -33,11 +33,11 @@ jobs:
       run:  |
         trivy fs --format table -o trivy-fs-report.html .
 
-    - name: Official SonarQube Scan
-      uses: SonarSource/sonarqube-scan-action@master
-      env:
-        SONAR_TOKEN: $({ secrets.SONAR_TOKEN })
-        SONAR_HOST_URL: $({ secrets.SONAR_HOST_URL })
+#    - name: Official SonarQube Scan
+#      uses: SonarSource/sonarqube-scan-action@master
+#      env:
+#        SONAR_TOKEN: $({ secrets.SONAR_TOKEN })
+#        SONAR_HOST_URL: $({ secrets.SONAR_HOST_URL })
 
     - name: Install jq
       run: sudo apt-get update && sudo apt-get install -y jq
